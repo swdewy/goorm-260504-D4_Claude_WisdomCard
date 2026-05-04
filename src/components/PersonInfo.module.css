@@ -4,6 +4,12 @@
   gap: 4px;
 }
 
+.metaRow {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+}
+
 .nameKo {
   font-size: var(--font-size-body);
   font-weight: var(--font-weight-heading);
@@ -11,24 +17,18 @@
   letter-spacing: var(--letter-spacing-body);
 }
 
-.achievements {
-  font-size: 14px;
-  font-weight: var(--font-weight-body);
-  color: var(--color-ink);
-  opacity: 0.6;
-  line-height: 1.5;
-}
-
 .meta {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: var(--font-weight-body);
   color: var(--color-ink);
   opacity: 0.45;
 }
 
-.nameEn {
+
+.achievements {
   font-size: 13px;
   font-weight: var(--font-weight-body);
   color: var(--color-ink);
-  opacity: 0.45;
+  opacity: 0.55;
+  line-height: 1.5;
 }

@@ -7,9 +7,11 @@ export default function PersonInfo({ person }) {
   return (
     <div className={styles.container}>
       <p className={styles.nameKo}>{name_ko}</p>
+      <div className={styles.metaRow}>
+        <span className={styles.meta}>{name_en}</span>
+        <span className={styles.meta}>{lifespan}</span>
+      </div>
       <p className={styles.achievements}>{achievements}</p>
-      <p className={styles.meta}>{lifespan}</p>
-      <p className={styles.nameEn}>{name_en}</p>
     </div>
   )
 }

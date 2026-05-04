@@ -1,72 +1,79 @@
-.layout {
+.root {
+  display: flex;
+  flex-direction: column;
   min-height: 100%;
+}
+
+.pageContent {
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: calc(68px + env(safe-area-inset-bottom, 0px));
+}
+
+/* ─── Home layout ──────────────────────────────────────────── */
+.layout {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: var(--space-8) var(--space-3) var(--space-6);
-  gap: var(--space-5);
+  padding: var(--space-5) var(--space-3) var(--space-4);
+  gap: 36px;
 }
 
 .header {
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-1);
 }
 
 .kicker {
   font-size: var(--font-size-kicker);
   font-weight: var(--font-weight-kicker);
-  letter-spacing: var(--letter-spacing-kicker);
+  letter-spacing: 0.6px;
   text-transform: uppercase;
   color: var(--color-ink);
   opacity: 0.4;
+  margin-bottom: 2px;
 }
 
 .title {
-  font-size: 36px;
+  font-size: 32px;
   font-weight: var(--font-weight-heading);
   letter-spacing: -1px;
   color: var(--color-ink);
   line-height: 1.1;
 }
 
-/* ─── Card + mascot wrapper ──────────────────────────────── */
+/* ─── Card + mascot ─────────────────────────────────────────── */
 .contentArea {
   width: 100%;
   max-width: 460px;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .cardWrapper {
   position: relative;
   width: 100%;
-  /* 마스코트가 카드 밖으로 나올 공간 확보 */
-  padding-bottom: 100px;
+  /* 마스코트가 카드 아래로 살짝 나올 공간 */
+  padding-bottom: 36px;
 }
 
 .mascot {
   position: absolute;
   bottom: 0;
-  right: -28px;
-  width: 160px;
+  right: -16px;
+  width: 150px;
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 12px 24px rgba(62, 50, 44, 0.18));
+  filter: drop-shadow(0 10px 20px rgba(62, 50, 44, 0.16));
   pointer-events: none;
 }
 
-/* ─── Actions ───────────────────────────────────────────── */
-.actions {
+/* ─── 다음 명언 버튼 ─────────────────────────────────────── */
+.actionsBar {
   display: flex;
   justify-content: center;
 }
 
 @media (min-width: 600px) {
-  .layout { padding: var(--space-10) var(--space-6) var(--space-8); }
+  .layout { padding: var(--space-6) var(--space-6) var(--space-3); gap: var(--space-3); }
   .contentArea { max-width: 520px; }
-  .mascot { width: 180px; height: 180px; right: -16px; }
+  .actionsBar { max-width: 520px; }
+  .mascot { width: 170px; right: -40px; }
 }

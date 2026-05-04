@@ -14,7 +14,7 @@
   --line-height-body:    1.47;
   --letter-spacing-body: -0.374px;
 
-  --font-size-headline:      clamp(22px, 4vw, 34px);
+  --font-size-headline:      clamp(19px, 3.8vw, 26px);
   --font-weight-heading:     600;
   --letter-spacing-headline: -0.7px;
 
