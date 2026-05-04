@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nameKo {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-heading);
+  color: var(--color-ink);
+  letter-spacing: var(--letter-spacing-body);
+}
+
+.achievements {
+  font-size: 14px;
+  font-weight: var(--font-weight-body);
+  color: var(--color-ink);
+  opacity: 0.6;
+  line-height: 1.5;
+}
+
+.meta {
+  font-size: 13px;
+  font-weight: var(--font-weight-body);
+  color: var(--color-ink);
+  opacity: 0.45;
+}
+
+.nameEn {
+  font-size: 13px;
+  font-weight: var(--font-weight-body);
+  color: var(--color-ink);
+  opacity: 0.45;
+}

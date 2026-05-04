@@ -1,0 +1,57 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-8) var(--space-4);
+}
+
+.mascot {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  /* 오브젝트 처리: 하단에만 부드러운 그림자 허용 */
+  filter: drop-shadow(0 12px 24px rgba(62, 50, 44, 0.18));
+}
+
+.message {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-body);
+  color: var(--color-ink);
+  opacity: 0.6;
+  text-align: center;
+  max-width: 240px;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--color-border);
+  border-top-color: var(--color-accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.retryBtn {
+  font-family: var(--font-family);
+  font-size: var(--font-size-kicker);
+  font-weight: var(--font-weight-kicker);
+  letter-spacing: var(--letter-spacing-kicker);
+  text-transform: uppercase;
+  color: var(--color-surface);
+  background: var(--color-accent);
+  border: none;
+  border-radius: var(--radius-pill);
+  padding: var(--padding-btn);
+  cursor: pointer;
+  transition: transform 0.1s ease, opacity 0.1s ease;
+}
+
+.retryBtn:active {
+  transform: scale(0.95);
+}
